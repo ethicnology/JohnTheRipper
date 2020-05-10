@@ -105,6 +105,7 @@ hermine
 héron
 hoppocampehibou
 hippopotame
+hippocampe
 hirondelle
 hyéne
 ibis
