@@ -23,7 +23,8 @@ def bruteforce(charset, maxlength):
 
 counter = 0
 success = 0
-for attempt in bruteforce(string.ascii_lowercase, 10):
+# string.ascii_letters = lower and upper & string.digits = 0123456789
+for attempt in bruteforce(string.ascii_letters+string.digits, 10):
     counter += 1
     bruteforce_hash = hashlib.md5(attempt.encode('utf-8')).hexdigest()
     for password in passwords:
