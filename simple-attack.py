@@ -77,19 +77,15 @@ for user in users:
             counter, success))
 
 # UsEr
-char_list = []
+new_users = []
 for user in users:
-    lower = user.lower()
-    capitalize = lower.capitalize()
-    for i in range(0, len(capitalize)):
+    char_list = []
+    for i in range(len(user)):
         if i % 2 == 0:
-            char_list.append(capitalize[i].upper())
+            char_list.append(user[i].upper())
         else:
-            char_list.append(capitalize[i])
-        if i == len(capitalize)-1:
-            char_list.append("/")
-new_str = ''.join(char_list)
-new_users = new_str.split("/")
+            char_list.append(user[i].lower())
+    new_users.append(''.join(char_list))
 
 for new_user in new_users:
     new_user_hash = hashlib.md5(new_user.encode('utf-8')).hexdigest()
