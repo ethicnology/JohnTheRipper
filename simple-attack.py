@@ -76,20 +76,28 @@ for user in users:
         sys.stdout.write("Attempt : {}, Success : {}\r".format(
             counter, success))
 
+# UsEr
+char_list = []
+for user in users:
+    lower = user.lower()
+    capitalize = lower.capitalize()
+    for i in range(0, len(capitalize)):
+        if i % 2 == 0:
+            char_list.append(capitalize[i].upper())
+        else:
+            char_list.append(capitalize[i])
+        if i == len(capitalize)-1:
+            char_list.append("/")
+new_str = ''.join(char_list)
+new_users = new_str.split("/")
 
-# newUsers = []
-# for user in users:
-#     Lower = user.lower()
-#     Capitalize = Lower.capitalize()
-
-#     for i in range(1, len(user)):
-#         if len(user) % i == 0:
-#             newUsers.append(user[i].upper())
-#         else:
-#             newUsers.append(user[i])
-#         if i == (len(user)-1):
-#             newUsers.append("/")
-
-# print(len(user))
-
-# print(newUsers)
+for new_user in new_users:
+    new_user_hash = hashlib.md5(new_user.encode('utf-8')).hexdigest()
+    counter += 1
+    for password in passwords:
+        if password == new_user_hash:
+            success += 1
+            sys.stdout.write("The password = {} match hash : {} after {} attempts\n".format(
+                new_user, password, counter))
+    sys.stdout.write("Attempt : {}, Success : {}\r".format(
+        counter, success))
