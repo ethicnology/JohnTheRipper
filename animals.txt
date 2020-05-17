@@ -8,10 +8,12 @@ alpaga
 anaconda
 ane
 anoa
-antilopechien
+antilope
+chien
 araignée
 autruche
-aye-ayecrevette
+aye-aye
+crevette
 babouin
 baleine
 belette
@@ -23,7 +25,8 @@ bongos
 bonobo
 bouquetin
 brebis
-buffleloup
+buffle
+loup
 cachalot
 campagnol
 canard
@@ -93,7 +96,8 @@ girafe
 glouton
 gnou
 goret
-marsouingorille
+marsouin
+gorille
 grenouille
 grizzly
 grue
@@ -103,7 +107,7 @@ hamster
 hérisson
 hermine
 héron
-hoppocampehibou
+hibou
 hippopotame
 hippocampe
 hirondelle
